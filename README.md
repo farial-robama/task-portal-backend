@@ -4,7 +4,7 @@ REST API for **Taskboard**, a project and task management portal. Built with Nod
 
 - **Live API:** https://task-portal-backend-aarf.onrender.com/api/health
 - **Live app:** https://task-portal-frontend-tau.vercel.app
-- **Frontend repository:** https://github.com/YOUR-USERNAME/task-portal-frontend
+- **Frontend repository:** https://github.com/farial-robama/task-portal-frontend
 
 > **About the live demo:** the API runs on a free hosting tier. It sleeps after about 15 minutes idle, so the first request can take around a minute. Its filesystem is also reset on restart, so the database is recreated and re-seeded with a few sample tasks. For persistent data, run it locally or with Docker (see below).
 
