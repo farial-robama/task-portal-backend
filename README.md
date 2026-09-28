@@ -58,7 +58,7 @@ The API starts at **http://localhost:4000**. On first run it creates `data/tasks
 
 Check it works: open http://localhost:4000/api/health. You should see `{"status":"ok", ...}`.
 
-Then start the frontend: https://github.com/YOUR-USERNAME/task-portal-frontend
+Then start the frontend: https://github.com/farial-robama/task-portal-frontend
 
 ### Production build
 
