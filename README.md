@@ -47,7 +47,7 @@ backend/
 ### Run locally
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/task-portal-backend.git
+git clone https://github.com/farial-robama/task-portal-backend.git
 cd task-portal-backend
 cp .env.example .env
 npm install
