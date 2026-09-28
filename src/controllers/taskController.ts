@@ -65,7 +65,7 @@ export const createTask = asyncHandler(async (req: Request, res: Response) => {
   res.status(201).json({ data: task });
 });
 
-// PUT /api/tasks/:id  (full or partial update)
+// PUT /api/tasks/:id  
 export const updateTask = asyncHandler(async (req: Request, res: Response) => {
   const id = Number(req.params.id);
   const existing = findTaskById(id);
@@ -87,7 +87,7 @@ export const updateTask = asyncHandler(async (req: Request, res: Response) => {
   res.json({ data: findTaskById(id) });
 });
 
-// PATCH /api/tasks/:id/status  (quick status change, e.g. drag between columns)
+// PATCH /api/tasks/:id/status  
 export const updateTaskStatus = asyncHandler(
   async (req: Request, res: Response) => {
     const id = Number(req.params.id);

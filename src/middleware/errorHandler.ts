@@ -13,13 +13,10 @@ export function notFoundHandler(req: Request, res: Response) {
   res.status(404).json({ error: `Route not found: ${req.method} ${req.path}` });
 }
 
-// Centralised error handler. Any thrown error (including from async route
-// handlers, via the asyncHandler wrapper) ends up here.
 export function errorHandler(
   err: unknown,
   _req: Request,
   res: Response,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   _next: NextFunction
 ) {
   if (err instanceof ZodError) {
@@ -40,8 +37,6 @@ export function errorHandler(
   return res.status(500).json({ error: "Something went wrong on the server" });
 }
 
-// Wraps an async route handler so thrown/rejected errors reach errorHandler
-// without every controller needing its own try/catch.
 export function asyncHandler(
   fn: (req: Request, res: Response, next: NextFunction) => Promise<unknown>
 ) {

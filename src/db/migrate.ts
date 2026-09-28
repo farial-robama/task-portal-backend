@@ -2,11 +2,6 @@ import fs from "fs";
 import path from "path";
 import { db } from "./connection";
 
-/**
- * Runs every .sql file in /migrations, in filename order, inside a single
- * transaction. Statements use `CREATE TABLE IF NOT EXISTS`, so this is safe
- * to call on every server start.
- */
 export function runMigrations(): void {
   const migrationsDir = path.resolve(process.cwd(), "migrations");
   if (!fs.existsSync(migrationsDir)) return;

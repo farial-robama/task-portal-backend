@@ -11,6 +11,4 @@ export interface Task {
   updated_at: string;
 }
 
-// Row shape as returned by better-sqlite3 (snake_case matches the DB columns,
-// so no mapping is needed between the two).
 export type TaskRow = Task;
